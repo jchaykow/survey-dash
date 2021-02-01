@@ -1,0 +1,11 @@
+version: "3"
+services:
+  ####:
+    image: ############.dkr.ecr.us-west-2.amazonaws.com/#########:5.0
+    ports:
+      - "8050:8050"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8050"]
+      interval: 15s
+      timeout: 15s
+      retries: 3
